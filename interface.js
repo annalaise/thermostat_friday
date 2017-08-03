@@ -1,17 +1,6 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
 
-  $('#fire').fire({
-    mode:'anim',
-    speed:20,
-    maxPow:5,
-    gravity:0,
-    flameWidth:3,
-    flameHeight:3,
-    fireTransparency:80,
-    fadingFlameSpeed:8
-  });
-
   $('#temperature').text(thermostat.temperature());
 
   $('#temperature-up').on('click', function() {
@@ -49,10 +38,21 @@ $(document).ready(function() {
     $('#temperature').attr('class', thermostat.getEnergyUsage());
     if(thermostat.temperature() === 18) {
       snowstorm.toggleSnow();
-    
-    // } else (thermostat.temperature() === 25) {
-    //   $('#fire').toggle();
+    } else if (thermostat.temperature() === 25) {
+      $('#fire').show();
+      $('#fire').fire({
+        mode:'anim',
+        speed:20,
+        maxPow:5,
+        gravity:0,
+        flameWidth:3,
+        flameHeight:10,
+        fireTransparency:80,
+        fadingFlameSpeed:8
+      });
     }
   };
+
+
 
 });
