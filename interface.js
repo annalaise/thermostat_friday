@@ -1,7 +1,16 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
 
-  $('#fire').fire({mode:'anim'});
+  $('#fire').fire({
+    mode:'anim',
+    speed:20,
+    maxPow:5,
+    gravity:0,
+    flameWidth:3,
+    flameHeight:3,
+    fireTransparency:80,
+    fadingFlameSpeed:8
+  });
 
   $('#temperature').text(thermostat.temperature());
 
@@ -44,14 +53,4 @@ $(document).ready(function() {
 
     }
   }
-
-  $('#fire').fire({
-		speed:20,
-		maxPow:5,
-		gravity:0,
-		flameWidth:3,
-		flameHeight:0,
-		fadingFlameSpeed:8
-	});
-
 });
