@@ -47,10 +47,11 @@ $(document).ready(function() {
 
   function updateTemperature() {
     $('#temperature').attr('class', thermostat.getEnergyUsage());
-    if(thermostat.temperature() === 18){
+    if(thermostat.temperature() === 18) {
       snowstorm.toggleSnow();
-    } else if (thermostat.temperature() === 25) {
-
+    } else (thermostat.temperature() === 25) {
+      $('#fire').toggle();
     }
-  }
+  };
+
 });

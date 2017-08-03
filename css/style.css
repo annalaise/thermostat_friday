@@ -32,3 +32,29 @@ h1 {
 .high-usage {
   color: red;
 }
+
+.jumbotron {
+  background-size: cover;
+  background-color: transparent !important;
+  height: 100vh;
+  text-align: center;
+}
+
+.panel-default {
+  background-color: transparent !important;
+}
+
+.centerme {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fire {
+  height: auto;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+}
