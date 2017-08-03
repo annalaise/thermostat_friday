@@ -49,8 +49,9 @@ $(document).ready(function() {
     $('#temperature').attr('class', thermostat.getEnergyUsage());
     if(thermostat.temperature() === 18) {
       snowstorm.toggleSnow();
-    } else (thermostat.temperature() === 25) {
-      $('#fire').toggle();
+    
+    // } else (thermostat.temperature() === 25) {
+    //   $('#fire').toggle();
     }
   };
 
