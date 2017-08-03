@@ -1,6 +1,5 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
-
   $('#temperature').text(thermostat.temperature());
 
   $('#temperature-up').on('click', function() {
@@ -30,8 +29,16 @@ $(document).ready(function() {
     $('#power-saving-status').text('on');
   });
 
+  $('#temperature').on('change', function(){
+    $('#snowstorm').toggle(this.temperature() < 18);
+  });
+
   function updateTemperature() {
     $('#temperature').attr('class', thermostat.getEnergyUsage());
-  };
+    if(thermostat.temperature() === 18){
+      snowstorm.toggleSnow();
+    } else if (thermostat.temperature() === 25) {
 
+    }
+  }
 });
