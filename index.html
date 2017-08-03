@@ -3,13 +3,19 @@
 <head>
   <meta charset="utf-8">
   <link href="style.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="src/thermostat.js"></script>
+  <script id="snowstorm" src="./src/snowstorm/snowstorm.js"></script>
+  <script type="text/javascript" src="./src/Fire/fire-0.62.min.js"></script>
+  <script src="interface.js"></script>
+  <style> .fire{width:320px;height:240px;} </style>
   <title>Thermostat</title>
 </head>
 <body>
   <h1>Thermostat</h1>
 
+<div id="fire">
 <section>
   <h1 id="temperature"></h1>
 
@@ -23,10 +29,8 @@
     <button type="button" class="button psm-off" id="powersaving-off">Off</button>
   </p>
 </section>
+</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="src/thermostat.js"></script>
-<script id="snowstorm" src="./src/snowstorm/snowstorm.js"></script>
-<script src="interface.js"></script>
+
 
 </body>
