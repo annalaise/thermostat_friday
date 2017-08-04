@@ -26,6 +26,7 @@ $(document).ready(function() {
     thermostat.up();
     $('#temperature').text(thermostat.temperature());
     updateTemperature();
+    saveTemperature();
   });
 
   $('#temperature-down').on('click',function() {
@@ -72,6 +73,8 @@ $(document).ready(function() {
     }
   };
 
-
+  function saveTemperature() {
+  $.post( "localhost:4567/temperature", {temperature: thermostat.temperature()});
+}
 
 });
