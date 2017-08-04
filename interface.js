@@ -1,9 +1,24 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
 
-  $.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=daf41bb7aaab3c1e708dd343d71919fc&units=metric', function(data) {
-  $('#outside-temperature').text(data.main.temp);
+
+  function displayWeather(city){
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
+    var token = '&appid=daf41bb7aaab3c1e708dd343d71919fc';
+    var units = '&units=metric';
+      $.get(url + token + units,function(data){
+        $('#outside-temperature').text(data.main.temp);
+      })
+  }
+
+  displayWeather('London');
+
+  $('#select-city').submit(function(event){
+    event.preventDefault();
+    var city = $('#current-city').val();
+    displayWeather(city);
   })
+
 
   $('#temperature').text(thermostat.temperature());
 
