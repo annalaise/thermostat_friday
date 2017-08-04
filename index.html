@@ -16,54 +16,55 @@
 </head>
 <body>
 
+    <div class="container">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2"></div>
+      <div class="row">
 
-      <div class="col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-body">
-                <h1>Thermostat</h1>
-                  <p class="temp-readings">
-                    <h4>Ambient:</h4>
-                    <h2><span id="temperature"></span>&#8451</h2>
-                  </p>
-                  <button type="button" class="btn btn-danger" id="temperature-up">+</button>
-                  <button type="button" class="btn btn-primary" id="temperature-down">-</button>
-                  <button class="btn btn-default" id="temperature-reset">reset</button></br>
-                </br>
-                  POWER SAVING MODE: <span id="power-saving-status">ON</span></br>
-                  <button type="button" class="btn btn-danger btn-lg" id="powersaving-on">On</button>
-                  <button type="button" class="btn btn-primary btn-lg" id="powersaving-off">Off</button></br>
-                  <canvas id="fire"></canvas>
+        <div class="col-md-2"></div>
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+                  <h1>Thermostat</h1>
+                      <h4>Ambient:</h4>
+                      <h2><span id="temperature"></span>&#8451</h2>
+                    <button type="button" class="btn btn-danger btn-lg" id="temperature-up">+</button>
+                    <button type="button" class="btn btn-primary btn-lg" id="temperature-down">-</button>
+                    <button class="btn btn-default btn-lg" id="temperature-reset">RESET</button></br>
+                  </br>
+                    POWER SAVING MODE: <span id="power-saving-status">ON</span></br>
+                    <button type="button" class="btn btn-danger btn-lg" id="powersaving-on">On</button>
+                    <button type="button" class="btn btn-primary btn-lg" id="powersaving-off">Off</button></br>
+                    <canvas id="fire"></canvas>
+            </div>
           </div>
         </div>
-      </div>
 
 
-      <div class="col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h1>Weather</h1>
-              <p class="temp-readings">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1>Weather</h1>
                 <h4>Outside:</h4>
-                <h2><span id="outside-temperature"></span>&#8451</h2>
-              <form id = "select-city">
-                <div class="form-group">
-                <input id= "current-city" class="form-control" type ="text" placeholder="Enter a city"></input>
+                  <h2><span id="outside-temperature"></span>&#8451</h2>
+                  <h4 id="city"></h4>
+                  <h4>Forecast: <span id="conditions"></span></h4>
+                <form id = "select-city">
+                  <div class="input-group">
+                  <input id= "current-city" class="form-control" type ="text" placeholder="Enter a city"></input>
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </span>
                   </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-              </select>
-            </p>
+                  </form>
+                </select>
+            </div>
           </div>
         </div>
+  
+        <div class="col-md-2"></div>
       </div>
-
-      <div class="col-md-2"></div>
     </div>
-  </div>
 
 
   <script src="js/bootstrap.min.js"></script>

@@ -8,8 +8,16 @@ $(document).ready(function() {
     var units = '&units=metric';
       $.get(url + token + units,function(data){
         $('#outside-temperature').text(data.main.temp);
+        $('#city').text(data.name);
+        $('#conditions').text(data.weather[0].description);
+        if (data.weather[0].main == "Clouds") {
+          $("body").css("background-image", "/img/clouds.jpg");
+        } else if (data.weather[0].main == "Rain") {
+          $("body").css("background-image", "/img/rain.jpg");
+        }
       })
   }
+
 
   displayWeather('London');
 
@@ -18,7 +26,6 @@ $(document).ready(function() {
     var city = $('#current-city').val();
     displayWeather(city);
   })
-
 
   $('#temperature').text(thermostat.temperature());
 

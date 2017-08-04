@@ -1,5 +1,7 @@
 body {
-  background: #333333;
+  background-color: #333333;
+  background-image: none;
+  background-size: 100% 100%;
   font-family: 'Raleway', sans-serif;
   color: #f2f2f2;
   text-align: center;
@@ -39,8 +41,13 @@ p {
   color: red;
 }
 
+.row {
+    padding-top: 175px;
+}
+
+
 .panel-default {
-  background-color: transparent !important;
+  background-color: #333333;
   color: #f2f2f2;
   border-color: transparent !important;
 }
@@ -53,4 +60,9 @@ p {
 
 .temp-readings {
   color: red !important;
+}
+
+
+#conditions {
+    text-transform: capitalize;
 }
