@@ -3,9 +3,14 @@ body {
   font-family: 'Raleway', sans-serif;
   color: #f2f2f2;
   text-align: center;
+  line-height: 200% !important;
 }
 
 h1 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+h2 {
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -18,20 +23,9 @@ canvas {
   height: 50%;
 }
 
-.button-up, .psm-on {
-  border-radius: 6px;
-  border: 2px solid red;
-  color: black;
-  font-size: 19px;
+p {
+  margin-top: 20px;
 }
-
-.button-down, .psm-off {
-  border-radius: 6px;
-  border: 2px solid blue;
-  color: black;
-  font-size: 19px;
-}
-
 
 .low-usage {
   color: blue;
@@ -43,15 +37,6 @@ canvas {
 
 .high-usage {
   color: red;
-}
-
-.jumbotron {
-  background-size: cover;
-  background-color: transparent !important;
-  color: #f2f2f2;
-  height: 100vh;
-  text-align: center;
-  border-color: transparent !important;
 }
 
 .panel-default {

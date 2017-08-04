@@ -41,12 +41,12 @@ $(document).ready(function() {
 
   $('#powersaving-off').on('click', function(){
     thermostat.powerSavingModeOff();
-    $('#power-saving-status').text('off');
+    $('#power-saving-status').text('OFF');
   });
 
   $('#powersaving-on').on('click', function(){
     thermostat.powerSavingModeOn();
-    $('#power-saving-status').text('on');
+    $('#power-saving-status').text('ON');
   });
 
   $('#temperature').on('change', function(){
