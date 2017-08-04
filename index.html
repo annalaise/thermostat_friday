@@ -16,27 +16,44 @@
 </head>
 <body>
 
-  <div class="jumbotron jumbotron-fluid">
-    <div class="centerme text-center">
 
-      <div class="panel panel-default">
-        <div class="panel-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
 
-              <h1>Thermostat</h1>
-              <h1 id="temperature"></h1>
-
-                <button type="button" class="button button-up" id="temperature-up">+</button>
-                <button type="button" class="button button-down" id="temperature-down">-</button>
-                <button id="temperature-reset">reset</button>
-                power saving mode is <span id="power-saving-status">on</span>
-                <button type="button" class="button psm-on" id="powersaving-on">On</button>
-                <button type="button" class="button psm-off" id="powersaving-off">Off</button></br>
-
-                <canvas id="fire"></canvas>
-
-              </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+                <h1>Thermostat</h1>
+                  <p class="temp-readings">
+                    <p>Ambient Temp: <span id="temperature"></span>&#8451</p>
+                  </p>
+                  <button type="button" class="button button-up" id="temperature-up">+</button>
+                  <button type="button" class="button button-down" id="temperature-down">-</button>
+                  <button id="temperature-reset">reset</button>
+                  power saving mode is <span id="power-saving-status">on</span>
+                  <button type="button" class="button psm-on" id="powersaving-on">On</button>
+                  <button type="button" class="button psm-off" id="powersaving-off">Off</button></br>
+                  <canvas id="fire"></canvas>
           </div>
+        </div>
       </div>
+
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h1>Weather</h1>
+              <p class="temp-readings">
+              <p>Outside Temp: <span id="outside-temperature"></span>&#8451</p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+    </div>
   </div>
+
   <script src="js/bootstrap.min.js"></script>
 </body>

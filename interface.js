@@ -1,6 +1,10 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
 
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=daf41bb7aaab3c1e708dd343d71919fc&units=metric', function(data) {
+  $('#outside-temperature').text(data.main.temp);
+  })
+
   $('#temperature').text(thermostat.temperature());
 
   $('#temperature-up').on('click', function() {
